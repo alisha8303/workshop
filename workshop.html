@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Webpage</title>
+<style>
+  /* Reset default margin and padding */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    background-image: url('bk1.jpg'); /* Add your image URL here */
+    background-size: cover; /* Cover the entire viewport */
+    background-repeat: no-repeat; /* Do not repeat the background image */
+    color: #fff; /* Set font color to white */
+    background-attachment: fixed; /* Keep the background image fixed */
+  }
+
+  /* Header styles */
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    z-index: 1000; /* Ensures header is above other content */
+  }
+
+  /* Navigation styles */
+  nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #555; /* Darker background color */
+    padding: 10px 0; /* Added padding */
+  }
+
+  nav ul {
+    list-style-type: none;
+    display: flex;
+  }
+
+  nav ul li {
+    margin: 0 10px;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  nav ul li:hover {
+    transform: scale(1.2);
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease; /* Smooth transition for color change */
+  }
+
+  nav ul li a:hover {
+    color: #ffd700; /* Change color on hover */
+  }
+
+  /* Main content styles */
+  .main-content {
+    margin-top: 60px; /* Account for fixed header */
+    padding: 20px;
+    padding-bottom: 100px; /* Adjusted padding to accommodate footer */
+  }
+
+  /* "What We Do" cards section */
+  .what-we-do {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+
+  .card {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    animation: fadeInUp 1s ease-in-out;
+    flex-direction: column; /* Align child cards vertically */
+  }
+
+  .card:hover {
+    transform: scale(1.1);
+  }
+
+  /* Footer styles */
+  footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  /* Animation */
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Read More button styles */
+  .read-more {
+    background-color: #4285F4; /* Blue */
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    margin-top: 10px; /* Added margin */
+  }
+
+  .read-more:hover {
+    background-color: #1A73E8; /* Darker blue on hover */
+  }
+
+  /* Child card styles */
+  .child-card {
+    background-color: #f0f0f0; /* Light gray background */
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px; /* Added margin */
+    text-align: center;
+    color: #000; /* Set font color to black */
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="main-content">
+  <h1 style="color: white;">Welcome to Our Website</h1>
+  
+  <p style="color: white;">At our website, we are dedicated to providing innovative marketing solutions and conducting thorough research to help businesses thrive in today's competitive market. Our team of experts is committed to delivering impactful strategies and actionable insights.</p>
+
+  <h2 style="color: white;">What We Do</h2>
+  <div class="what-we-do">
+    <div class="card" style="background-color: #9695a6c2;"> <!-- Blue-green background -->
+      <h3 style="color: white;">Marketing</h3>
+      <div class="child-card">
+        <p>Grow Your Business.</p>
+      </div>
+    </div>
+    <div class="card" style="background-color: #9695a6c2;"> <!-- Light red background -->
+      <h3 style="color: white;">Research</h3>
+      <div class="child-card">
+        <p>Discover Insights.</p>
+      </div>
+    </div>
+    <div class="card" style="background-color: #9695a6c2;"> <!-- Purple background -->
+      <h3 style="color: white;">Analytics</h3>
+      <div class="child-card">
+        <p>Analyze Performance.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  &copy; 2024 - All rights reserved
+</footer>
+
+</body>
+</html>

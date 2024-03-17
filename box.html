@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Box with Child Element</title>
+<style>
+  /* Style for the parent box */
+  .parent-box {
+    width: 500px;
+    height: 500px;
+    background-color: #e0e0e0;
+    position: relative; /* Needed for absolute positioning of child */
+  }
+  
+  /* Style for the child element */
+  .child-element {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ff9999;
+    padding: 20px;
+    border-radius: 10px;
+    animation: rotate 4s linear infinite; /* Apply animation to the child element */
+  }
+
+  /* Animation for the child element */
+  @keyframes rotate {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg); /* Initial rotation */
+    }
+    25% {
+      transform: translate(-50%, -50%) rotate(90deg); /* Rotate 90 degrees at 25% */
+      background-color: #99ccff; /* Change background color */
+      top: 10%; /* Adjust position */
+      left: 10%;
+    }
+    50% {
+      transform: translate(-50%, -50%) rotate(180deg); /* Rotate 180 degrees at 50% */
+      background-color: #ffcc66; /* Change background color */
+      top: 90%; /* Adjust position */
+      left: 90%;
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(360deg); /* Full rotation at 100% */
+      background-color: #99ff99; /* Change background color */
+      top: 50%; /* Reset position */
+      left: 50%;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- Parent box -->
+<div class="parent-box">
+  <!-- Child element -->
+  <div class="child-element">
+    Child element
+  </div>
+</div>
+
+</body>
+</html>
